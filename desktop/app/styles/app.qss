@@ -1,0 +1,255 @@
+/* =========================
+   Kite - Global QSS (FIXED)
+   ========================= */
+
+/* Paleta
+   Azul oscuro: #00273d
+   Azul acento: #1cabb0
+   Blanco suave: #f7fafc
+   Gris texto: #cbd5e1
+   Gris claro: #e2e8f0
+*/
+
+/* -------------------------
+   GLOBAL
+   ------------------------- */
+
+/* Reset general */
+* {
+    font-family: "Montserrat", "Segoe UI", "Inter", "Arial";
+    font-size: 11pt; /* 12pt era grande y con widgets bajos se corta */
+}
+
+/* Evita fondos raros */
+QWidget {
+    color: #0f172a;
+    background: transparent;
+}
+
+/* Dialogs */
+QMessageBox {
+    background-color: #ffffff;
+}
+
+/* Botones genéricos */
+QPushButton {
+    outline: none;
+}
+
+/* =========================
+   LOGIN 
+   ========================= */
+
+#contenedorInicial {
+    background-color: #00273d;
+}
+
+/* Título */
+#lblBienvenida {
+    color: #f7fafc;
+    font-weight: 800;
+    font-size: 20pt;
+}
+
+/* Labels */
+#login QLabel {
+    color: #e2e8f0;
+    font-weight: 650;
+    font-size: 11pt;
+}
+
+/* Inputs */
+#lnCorreo, #lnContrasena, #lnUser  {
+    background-color: rgba(255,255,255,0.10);
+    border: 1px solid rgba(255,255,255,0.22);
+    border-radius: 10px;
+    padding: 2px 12px;
+    color: #f8fafc;
+}
+
+#lnCorreo:focus, #lnContrasena:focus {
+    border: 1px solid #1cabb0;
+    background-color: rgba(255,255,255,0.14);
+}
+
+/* Botón acceder */
+#btnLogIn {
+    background-color: #1cabb0;
+    color: #00273d;
+    border: none;
+    border-radius: 14px;
+    padding: 8px 16px;
+    font-weight: 800;
+    font-size: 12pt;
+}
+
+#btnLogIn:hover { background-color: #27c3c8; }
+#btnLogIn:pressed { background-color: #14979b; }
+
+/* botón inicio de sesion*/
+#btnRegistrar {
+    background-color: #1cabb0;
+    color: #00273d;
+    border: none;
+    border-radius: 14px;
+    padding: 8px 16px;
+    font-weight: 800;
+    font-size: 12pt;
+}
+
+#btnRegistrar:hover { background-color: #27c3c8; }
+#btnRegistrar:pressed { background-color: #14979b; }
+
+/* Botón registro (link) */
+#btnRegistro {
+    background: transparent;
+    color: #cbd5e1;
+    border: none;
+    font-weight: 700;
+}
+
+#btnRegistro:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+/*boton login (link)*/
+#btnInicioSesion{
+    background: transparent;
+    color: #cbd5e1;
+    border: none;
+    font-weight: 700;
+}
+
+#btnInicioSesion:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+#label_2 {
+    color: #cbd5e1;
+}
+/* -------------------------
+   DASHBOARD (VentanaPrincipal)
+   ------------------------- */
+
+/* Sidebar */
+#menuIzquierda {
+    background-color: #00273d;
+    border-radius: 18px;
+}
+
+/* Área principal */
+#menuPrincipal {
+    background-color: #f7fafc;
+    border-radius: 18px;
+}
+
+/* Header / contenedor */
+#encabezado, #contenedor {
+    background: transparent;
+}
+
+/* --- Botones del menú lateral --- */
+QPushButton#btnActivos,
+QPushButton#btnUbicaciones,
+QPushButton#btnMovimientos,
+QPushButton#btnUsuarios,
+QPushButton#pushButton_6 {
+
+    background-color: rgba(255,255,255,0.07);
+    color: #ffffff;
+
+    border: 1px solid rgba(255,255,255,0.14);
+    border-radius: 16px;
+
+    padding: 10px 18px;   /* Qt-friendly */
+    text-align: left;
+
+    font-weight: 700;
+    min-height: 48px;
+
+    qproperty-iconSize: 20px 20px; /* si hay iconos */
+}
+
+/* Hover */
+QPushButton#btnActivos:hover,
+QPushButton#btnUbicaciones:hover,
+QPushButton#btnMovimientos:hover,
+QPushButton#btnUsuarios:hover,
+QPushButton#pushButton_6:hover {
+    background-color: rgba(255,255,255,0.11);
+}
+
+/* Pressed */
+QPushButton#btnActivos:pressed,
+QPushButton#btnUbicaciones:pressed,
+QPushButton#btnMovimientos:pressed,
+QPushButton#btnUsuarios:pressed,
+QPushButton#pushButton_6:pressed {
+    background-color: rgba(28,171,176,0.25);
+}
+
+/* Activo */
+QPushButton[active="true"] {
+    background-color: rgba(28,171,176,0.45);
+    border: 1px solid rgba(28,171,176,0.85);
+    font-weight: 800;
+}
+
+/* --- Cerrar sesión --- */
+QPushButton#btnCerrarSesion {
+    background-color: transparent;
+    color: rgba(255,255,255,0.92);
+    border: 1px solid rgba(255,255,255,0.20);
+    border-radius: 12px;
+
+    padding: 8px 16px;
+    min-height: 40px;
+    font-weight: 700;
+}
+
+QPushButton#btnCerrarSesion:hover {
+    background-color: rgba(255,255,255,0.08);
+}
+
+
+/* -------------------------
+   TABLAS
+   ------------------------- */
+
+QTableView, QTableWidget {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    gridline-color: #e2e8f0;
+    selection-background-color: rgba(28,171,176,0.22);
+    selection-color: #0f172a;
+}
+
+QHeaderView::section {
+    background-color: #f1f5f9;
+    color: #0f172a;
+    border: none;
+    padding: 10px;
+    font-weight: 800;
+}
+
+/* -------------------------
+   SCROLLBAR
+   ------------------------- */
+QScrollBar:vertical {
+    background: transparent;
+    width: 10px;
+    margin: 4px;
+}
+QScrollBar::handle:vertical {
+    background: rgba(15,23,42,0.22);
+    border-radius: 5px;
+    min-height: 30px;
+}
+QScrollBar::handle:vertical:hover {
+    background: rgba(15,23,42,0.32);
+}
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+    height: 0px;
+}
